@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 3 Exercises:</title>
+</head>
+
+<body>
+    Look at the console
+    <script>
+        console.log('Chapter 3 Exercise 1')
+
+        function min(a, b) {
+            if (a < b)
+                return a
+            else
+                return b
+        }
+        console.log(min(0, 10));
+        // → 0
+        console.log(min(0, -10));
+        // → -10
+
+        consoel.log('  ')
+        consoel.log('  ')
+        consoel.log('  ')
+        console.log('Chapter 3 Exercise 2')
+
+        function isEven(n) {
+            if (n >= 0) {
+                if (n == 0) return true;
+                else if (n == 1) return false;
+                else return isEven(n - 2);
+            } else {
+                return false;
+            }
+        }
+
+        // Books Solution
+
+        // function isEven(n) {
+        //     if (n == 0) return true;
+        //     else if (n == 1) return false;
+        //     else if (n < 0) return isEven(-n);
+        //     else return isEven(n - 2);
+        // }
+
+        console.log(isEven(50));
+        // → true
+        console.log(isEven(75));
+        // → false
+        console.log(isEven(-1));
+        // → ??
+        consoel.log('  ')
+        consoel.log('  ')
+        consoel.log('  ')
+        console.log('Chapter 3 Exercise 3')
+
+        function countBs(string) {
+            return countChar(string, "B");
+        }
+
+        function countChar(string, char) {
+            let count = 0;
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] === char) count++
+            }
+            return count;
+        }
+
+        console.log(countBs("BBC"));
+        // → 2
+        console.log(countChar("kakkerlak", "k"));
+        // → 4
+
+
+        /// Book Solution 
+
+        // function countChar(string, ch) {
+        //     let counted = 0;
+        //     for (let i = 0; i < string.length; i++) {
+        //         if (string[i] == ch) {
+        //             counted += 1;
+        //         }
+        //     }
+        //     return counted;
+        // }
+    </script>
+
+</body>
+
+</html>
