@@ -43,6 +43,34 @@ Passing this string to `console.log` should show something like this:
 
 When you have a program that generates this pattern, define a binding size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.
 
+##### SOLUTION
+```js
+        function gridBySize(size = 8) {
+            let grid = '';
+            for (let row = 0; row < size; row++) {
+                let rowString = '';
+                if (row > 0)
+                    rowString += '\n';
+                for (let column = 0; column < size; column++) {
+                    if (row % 2 === 0) {
+                        if (column % 2 === 0)
+                            rowString += '#'
+                        else
+                            rowString += ' '
+                    } else {
+                        if (column % 2 === 0)
+                            rowString += ' '
+                        else
+                            rowString += '#'
+                    }
+                }
+                grid += rowString
+            }
+            console.log(grid);
+        }
+
+```
+
 ## Chapter 3: Functions
 
 ### Minimum
