@@ -14,10 +14,8 @@
         console.log('Chapter 3 Exercise 1')
 
         function min(a, b) {
-            if (a < b)
-                return a
-            else
-                return b
+            if (a < b) return a
+            else return b
         }
         console.log(min(0, 10));
         // → 0
@@ -59,16 +57,16 @@
         consoel.log('  ')
         console.log('Chapter 3 Exercise 3')
 
-        function countBs(string) {
-            return countChar(string, "B");
-        }
-
         function countChar(string, char) {
             let count = 0;
             for (let i = 0; i < string.length; i++) {
                 if (string[i] === char) count++
             }
             return count;
+        }
+
+        function countBs(string) {
+            return countChar(string, "B");
         }
 
         console.log(countBs("BBC"));
