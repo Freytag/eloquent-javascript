@@ -183,6 +183,8 @@ Next, write a `sum` function that takes an array of numbers and returns the sum 
 
 As a bonus assignment, modify your range function to take an optional third argument that indicates the “step” value used when building the array. If no step is given, the elements go up by increments of one, corresponding to the old behavior. The function call `range(1, 10, 2)` should return `[1, 3, 5, 7, 9]`. Make sure it also works with negative step values so that `range(5, 2, -1)` produces `[5, 4, 3, 2]`.
 
+#### MY SOLUTION
+
 ```js
 function range(start, end, step = 1) {
   const completeRange = [];
@@ -210,6 +212,8 @@ function sum(numbers){
 ### Reversing an array
 
 Arrays have a `reverse` method that changes the array by inverting the order in which its elements appear. For this exercise, write two functions, `reverseArray` and `reverseArrayInPlace`. The first, `reverseArray`, takes an array as argument and produces a new array that has the same elements in the inverse order. The second, `reverseArrayInPlace`, does what the reverse method does: it _modifies_ the array given as argument by reversing its elements. Neither may use the standard `reverse` method.
+
+#### MY SOLUTION
 
 ```js
 function reverseArray(array) {
