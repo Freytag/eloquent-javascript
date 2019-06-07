@@ -10,9 +10,9 @@ while (star.length < 8) {
 // for (let line = "#"; line.length < 8; line += "#")
 //     console.log(line);
 
-consoel.log('  ')
-consoel.log('  ')
-consoel.log('  ')
+console.log('  ')
+console.log('  ')
+console.log('  ')
 console.log('Chapter 2 Exercise 2')
 
 
@@ -37,9 +37,9 @@ for (let i = 1; i < 101; i++) {
 //     console.log(output || n);
 // }
 
-consoel.log('  ')
-consoel.log('  ')
-consoel.log('  ')
+console.log('  ')
+console.log('  ')
+console.log('  ')
 console.log('Chapter 2 Exercise 3')
 
 function gridBySize(size = 8) {

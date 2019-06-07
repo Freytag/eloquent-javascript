@@ -11,19 +11,21 @@
     <label for="">
       Pick Chaper
       <select id="JSpicker">
+        <option value=""></option>
         <option value="chapter2.js">Chapter 2</option>
         <option value="chapter3.js">Chapter 3</option>
         <option value="chapter4.js">Chapter 4</option>
       </select>
     </label>
-    Look at the console open the console
+    <p>Look at the console <code>(CMD + OPT + i)</code></p>
     <div id="chapter"></div>
     <script>
       (function() {
         const jsPicker = document.getElementById("JSpicker");
         const chapScript = document.getElementById("chapter");
+
         jsPicker.addEventListener("change", e => {
-          console.log(e.target.value);
+          chapScript.innerHTML = "";
           var script = document.createElement("script");
           script.src = e.target.value;
           chapScript.appendChild(script);
