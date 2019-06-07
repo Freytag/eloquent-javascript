@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chapter 4 Exercises:</title>
+</head>
+
+<body>
+    Look at the console
+    <script>
+        console.log('Chapter 4 Exercise 1')
+
+        function range(start, end, step = 1) {
+            const completeRange = [];
+            if (end > start) {
+                for (let i = start; i <= end; i += step) {
+                    completeRange.push(i);
+                }
+            } else {
+                for (let i = start; i >= end; i -= Math.abs(step)) {
+                    completeRange.push(i);
+                }
+            }
+            return completeRange
+        }
+
+        function sum(numbers) {
+            let total = 0;
+            for (let number of numbers) {
+                total += number;
+            }
+            return total
+        }
+
+        console.log(range(1, 10));
+        // → [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        console.log(range(5, 2, -1));
+        // → [5, 4, 3, 2]
+        console.log(sum(range(1, 10)));
+        // → 55
+
+
+        // Books Solution
+        // function range(start, end, step = start < end ? 1 : -1) {
+        //     let array = [];
+
+        //     if (step > 0) {
+        //         for (let i = start; i <= end; i += step) array.push(i);
+        //     } else {
+        //         for (let i = start; i >= end; i += step) array.push(i);
+        //     }
+        //     return array;
+        // }
+
+        // function sum(array) {
+        //     let total = 0;
+        //     for (let value of array) {
+        //         total += value;
+        //     }
+        //     return total;
+        // }
+
+        consoel.log('  ')
+        consoel.log('  ')
+        consoel.log('  ')
+        console.log('Chapter 4 Exercise 2')
+
+        function reverseArray(array) {
+            const newArray = [];
+            for (let slot of array) {
+                newArray.unshift(slot);
+            }
+            return newArray;
+        }
+
+        function reverseArrayInPlace(array) {
+            for (let i = 0; i < Math.floor(array.length / 2); i++) {
+                let first = array[i];
+                array[i] = array[array.length - 1 - i];
+                array[array.length - 1 - i] = first;
+            }
+            return array;
+        }
+
+        console.log(reverseArray(["A", "B", "C"]));
+        // → ["C", "B", "A"];
+        let arrayValue = [1, 2, 3, 4, 5];
+        reverseArrayInPlace(arrayValue);
+        console.log(arrayValue);
+        // → [5, 4, 3, 2, 1]
+
+        consoel.log('  ')
+        consoel.log('  ')
+        consoel.log('  ')
+        console.log('Chapter 4 Exercise 3')
+
+        function countChar(string, char) {
+            let count = 0;
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] === char) count++
+            }
+            return count;
+        }
+
+        function countBs(string) {
+            return countChar(string, "B");
+        }
+
+        console.log(countBs("BBC"));
+        // → 2
+        console.log(countChar("kakkerlak", "k"));
+        // → 4
+
+
+        /// Book Solution 
+
+        // function countChar(string, ch) {
+        //     let counted = 0;
+        //     for (let i = 0; i < string.length; i++) {
+        //         if (string[i] == ch) {
+        //             counted += 1;
+        //         }
+        //     }
+        //     return counted;
+        // }
+    </script>
+
+</body>
+
+</html>
