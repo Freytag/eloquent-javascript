@@ -128,3 +128,41 @@ console.log(prepend(10, prepend(20, null)));
 // → {value: 10, rest: {value: 20, rest: null}}
 console.log(nth(arrayToList([10, 20, 30]), 1));
 // → 20
+
+
+
+console.log("  ");
+console.log("  ");
+console.log("  ");
+console.log("Chapter 4 Exercise 3");
+
+function deepEqual(a, b) {
+  if (a === b) return true;
+  
+  if (a == null || b == null || typeof a != "object" || typeof b != "object" ) return false;
+  
+  if (Object.keys(a).length === Object.keys(b).length) {
+	const aKeys = Object.keys(a), bKeys = Object.keys(b);
+    for (let key of aKeys) {
+      if (bKeys.includes(key) && deepEqual(a[key], b[key])) {
+        return true;
+      } else {
+        return false
+      }
+    }
+  } else {
+    return false
+  }
+}	
+
+// Book Solution
+// function deepEqual(a, b) {
+//   if (a === b) return true;
+//   if (a == null || typeof a != "object" || b == null || typeof b != "object") return false;
+//   let keysA = Object.keys(a), keysB = Object.keys(b);
+//   if (keysA.length != keysB.length) return false;
+//   for (let key of keysA) {
+//     if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
+//   }
+//   return true;
+// }
